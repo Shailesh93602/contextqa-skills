@@ -41,7 +41,9 @@ hands back a structured bundle.
   guide). Prefer `bug_fix_from_ticket` unless you only want the case.
 
 Then: `verify_bug_fix(test_case_id=N)` after a fix,
-`post_run_comment(...)` per attempt, `report_fix_to_ticket(...)` at the end.
+`post_run_comment(...)` per attempt, `report_fix_to_ticket(...)` at the end —
+each returns a `comment_body`; post it with your own Linear or Jira tool, the
+MCP posts nothing.
 **Never call `report_fix_to_ticket` without a real verification result**, and if
 verification still fails, call `investigate_failure(result_id)` for the actual
 evidence before concluding anything.
